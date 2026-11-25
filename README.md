@@ -1,57 +1,24 @@
-# Deep Learning From Scratch
+# Deep Learning From Scratch — AIR-004
 
-> **Development status: Planned.** Repository scaffolding only. No working implementation, experimental results, benchmark figures or completed research findings are claimed.
+**Status:** educational implementation locally verified; scientific audit and hosted CI pending.
 
-## Project overview
-Neural networks, backpropagation and deep learning fundamentals.
+NumPy neural network layers, manual backpropagation, SGD, momentum, Adam, dropout, L2 and valid 2D convolution. PyTorch is used only as a reference in tests and experiments. Complements [AIR-001](https://github.com/MarkRizam/machine-learning-from-scratch), [AIR-002](https://github.com/MarkRizam/mathematics-for-ai), [AIR-003](https://github.com/MarkRizam/statistics-for-ai) and [RizamLearning](https://github.com/MarkRizam/RizamLearning).
 
-## Motivation
-This project is part of Mohd Rizam Bakar's learning and research portfolio while transitioning from software engineering toward AI science. Its focus is to understand and investigate educational dense networks and training loops, before large-scale models.
+## Quick start
+Use Python 3.13 in a virtual environment; install CPU PyTorch first. PowerShell: `$env:OPENBLAS_NUM_THREADS='1'`; `$env:OMP_NUM_THREADS='1'`. Bash: `export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1`.
 
-## Research objectives
-- Understand computational graphs and gradient propagation.
-- test small neural networks systematically.
+```sh
+python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install numpy==2.3.5 -e ".[research]"
+python -m pytest -q
+python scripts/verify_committed_results.py
+python -m dl_from_scratch.experiments
+python scripts/notebooks.py
+```
 
-## Proposed scope
-Educational dense networks and training loops, before large-scale models.
+## Evidence
+8 experiments, 21 configurations, 63 per-seed records, 30 local tests and 8 executed notebooks. All synthetic; no paid APIs or GPU needed. See [protocol](research/protocol.md), [report](research/report.md), [raw records](results/benchmarks.json), [limitations](research/limitations.md).
 
-## Planned technologies
-Python, NumPy, PyTorch, pytest. These are proposed tools, not installed dependencies or implemented integrations. Record exact versions when implementation begins.
+![Synthetic image classification results](figures/EXP-008.svg)
 
-## Planned experiments or implementations
-- Implement forward and backward passes for a small network.
-- Compare manual gradients with automatic differentiation.
-- Record the effect of initialisation on a controlled task.
-
-## Reproducibility objectives
-- Record the research question, assumptions and acceptance criteria before each experiment.
-- Pin code revisions and environment/dependency versions; record hardware where relevant.
-- Document data sources, licences, preprocessing, splits and random seeds.
-- Compare against a stated baseline and report limitations and failure cases.
-- Provide runnable commands and reviewed artefact manifests when implementations exist.
-- Keep proposals separate from observations; report uncertainty rather than inventing results.
-
-## Current status
-**Planned.** Only documentation and repository setup exist. There are no released models, published datasets, benchmark results or participant studies in this repository.
-
-## Research and data responsibilities
-Use only public, synthetic or explicitly authorised non-sensitive material. Review dataset, model and dependency licences independently of the software licence. Do not commit credentials or private data.
-
-## Repository guide
-- [Documentation](docs/README.md): intended concepts and design notes.
-- [Research](research/README.md): questions, references and protocol planning.
-- [Datasets](datasets/README.md): provenance and access requirements.
-- [Experiments](experiments/README.md): planned protocols, not completed runs.
-- [Results](results/README.md): reporting policy; no results yet.
-- [Contributing](CONTRIBUTING.md): how to propose a focused contribution.
-
-## Related projects and portfolio
-- [machine-learning-from-scratch](https://github.com/MarkRizam/machine-learning-from-scratch)
-- [transformer-from-scratch](https://github.com/MarkRizam/transformer-from-scratch)
-- [RizamLearning](https://github.com/MarkRizam/RizamLearning): central portfolio and knowledge-library repository (visibility is managed separately).
-
-## Citation
-[CITATION.cff](CITATION.cff) identifies this software repository and its author. It does not claim a publication, affiliation, release or DOI.
-
-## License
-Original project software is licensed under the [MIT License](LICENSE). External datasets, pretrained models, reference documents and dependencies retain their own terms. The MIT license does not grant rights to third-party material.
+MIT for original code. Dependencies retain their licenses. Not a peer-reviewed study or production framework. See [LICENSE](LICENSE) and [CONTRIBUTING.md](CONTRIBUTING.md).
