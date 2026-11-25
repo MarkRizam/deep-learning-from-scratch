@@ -1,0 +1,2 @@
+# AIR-004 — Deep Learning From Scratch
+Eight controlled experiments investigate dense gradients, activation derivatives, XOR, optimizers, initialization, regularization, convolution gradients and synthetic image classification. The implementation uses explicit NumPy backpropagation and compares against PyTorch. Consult the full research report and raw records for numerical evidence, limitations and reproduction commands. The feature branch is not yet released; update status only after verified merge. No real-world or clinical inference is supported.

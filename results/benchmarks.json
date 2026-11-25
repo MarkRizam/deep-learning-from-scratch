@@ -1,0 +1,822 @@
+{
+  "project": "AIR-004",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "platform": "Linux"
+  },
+  "reproducibility": {
+    "runs": 2,
+    "atol": 1e-09,
+    "rtol": 0,
+    "status": "pass"
+  },
+  "records": [
+    {
+      "experiment": "EXP-001",
+      "seed": 11,
+      "configuration": "dense + cross entropy",
+      "metric": "maximum absolute difference",
+      "ours": 1.1102230246251565e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-001",
+      "seed": 11,
+      "configuration": "central difference",
+      "metric": "absolute derivative error",
+      "ours": 3.932243419768611e-12,
+      "reference": 0.0,
+      "reference_kind": "analytic backprop agreement ideal"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 11,
+      "configuration": "sigmoid",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.125,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 11,
+      "configuration": "tanh",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.332,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 11,
+      "configuration": "relu",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.481,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-003",
+      "seed": 11,
+      "configuration": "XOR",
+      "metric": "training accuracy",
+      "ours": 1.0,
+      "reference": 0.5,
+      "reference_kind": "single perceptron"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 11,
+      "configuration": "sgd",
+      "metric": "training cross entropy",
+      "ours": 0.5282430014993886,
+      "reference": 0.7133456531555827,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 11,
+      "configuration": "momentum",
+      "metric": "training cross entropy",
+      "ours": 0.16702435226078177,
+      "reference": 0.6491045195051309,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 11,
+      "configuration": "adam",
+      "metric": "training cross entropy",
+      "ours": 0.052664454891843154,
+      "reference": 0.5528187573730509,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 11,
+      "configuration": "scale=0.01",
+      "metric": "training cross entropy",
+      "ours": 0.40756228864304433,
+      "reference": 0.642155115568627,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 11,
+      "configuration": "scale=0.5",
+      "metric": "training cross entropy",
+      "ours": 0.07284612506969462,
+      "reference": 0.5571496910881911,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 11,
+      "configuration": "scale=2.0",
+      "metric": "training cross entropy",
+      "ours": 0.07646846379688825,
+      "reference": 1.8208629268075653,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 11,
+      "configuration": "dropout=0.0, L2=0.0",
+      "metric": "held-out accuracy",
+      "ours": 0.9,
+      "reference": 0.9,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 11,
+      "configuration": "dropout=0.3, L2=0.0",
+      "metric": "held-out accuracy",
+      "ours": 0.8666666666666667,
+      "reference": 0.9,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 11,
+      "configuration": "dropout=0.0, L2=0.01",
+      "metric": "held-out accuracy",
+      "ours": 0.95,
+      "reference": 0.9,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 11,
+      "configuration": "dropout=0.3, L2=0.01",
+      "metric": "held-out accuracy",
+      "ours": 0.85,
+      "reference": 0.9,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 11,
+      "configuration": "forward",
+      "metric": "maximum absolute difference",
+      "ours": 8.881784197001252e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 11,
+      "configuration": "input gradient",
+      "metric": "maximum absolute difference",
+      "ours": 4.440892098500626e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 11,
+      "configuration": "weight gradient",
+      "metric": "maximum absolute difference",
+      "ours": 5.329070518200751e-15,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 11,
+      "configuration": "bias gradient",
+      "metric": "maximum absolute difference",
+      "ours": 4.440892098500626e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-008",
+      "seed": 11,
+      "configuration": "CNN vs MLP",
+      "metric": "held-out accuracy",
+      "ours": 1.0,
+      "reference": 0.975,
+      "reference_kind": "dense MLP (different parameter counts)"
+    },
+    {
+      "experiment": "EXP-001",
+      "seed": 22,
+      "configuration": "dense + cross entropy",
+      "metric": "maximum absolute difference",
+      "ours": 1.1102230246251565e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-001",
+      "seed": 22,
+      "configuration": "central difference",
+      "metric": "absolute derivative error",
+      "ours": 3.3693603462836563e-12,
+      "reference": 0.0,
+      "reference_kind": "analytic backprop agreement ideal"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 22,
+      "configuration": "sigmoid",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.12,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 22,
+      "configuration": "tanh",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.319,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 22,
+      "configuration": "relu",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.502,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-003",
+      "seed": 22,
+      "configuration": "XOR",
+      "metric": "training accuracy",
+      "ours": 1.0,
+      "reference": 0.5,
+      "reference_kind": "single perceptron"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 22,
+      "configuration": "sgd",
+      "metric": "training cross entropy",
+      "ours": 0.5376756626583952,
+      "reference": 0.8461031464528209,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 22,
+      "configuration": "momentum",
+      "metric": "training cross entropy",
+      "ours": 0.23810561914166944,
+      "reference": 0.7750144819190301,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 22,
+      "configuration": "adam",
+      "metric": "training cross entropy",
+      "ours": 0.056727182072329914,
+      "reference": 0.6093860836650745,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 22,
+      "configuration": "scale=0.01",
+      "metric": "training cross entropy",
+      "ours": 0.16153515183276027,
+      "reference": 0.6222002804316107,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 22,
+      "configuration": "scale=0.5",
+      "metric": "training cross entropy",
+      "ours": 0.08871186135394134,
+      "reference": 0.6403379863289592,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 22,
+      "configuration": "scale=2.0",
+      "metric": "training cross entropy",
+      "ours": 0.11559106653474326,
+      "reference": 3.545686410507011,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 22,
+      "configuration": "dropout=0.0, L2=0.0",
+      "metric": "held-out accuracy",
+      "ours": 0.8833333333333333,
+      "reference": 0.8833333333333333,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 22,
+      "configuration": "dropout=0.3, L2=0.0",
+      "metric": "held-out accuracy",
+      "ours": 0.9666666666666667,
+      "reference": 0.8833333333333333,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 22,
+      "configuration": "dropout=0.0, L2=0.01",
+      "metric": "held-out accuracy",
+      "ours": 0.95,
+      "reference": 0.8833333333333333,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 22,
+      "configuration": "dropout=0.3, L2=0.01",
+      "metric": "held-out accuracy",
+      "ours": 0.9333333333333333,
+      "reference": 0.8833333333333333,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 22,
+      "configuration": "forward",
+      "metric": "maximum absolute difference",
+      "ours": 8.881784197001252e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 22,
+      "configuration": "input gradient",
+      "metric": "maximum absolute difference",
+      "ours": 8.881784197001252e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 22,
+      "configuration": "weight gradient",
+      "metric": "maximum absolute difference",
+      "ours": 1.7763568394002505e-15,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 22,
+      "configuration": "bias gradient",
+      "metric": "maximum absolute difference",
+      "ours": 8.881784197001252e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-008",
+      "seed": 22,
+      "configuration": "CNN vs MLP",
+      "metric": "held-out accuracy",
+      "ours": 0.975,
+      "reference": 0.925,
+      "reference_kind": "dense MLP (different parameter counts)"
+    },
+    {
+      "experiment": "EXP-001",
+      "seed": 33,
+      "configuration": "dense + cross entropy",
+      "metric": "maximum absolute difference",
+      "ours": 5.551115123125783e-17,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-001",
+      "seed": 33,
+      "configuration": "central difference",
+      "metric": "absolute derivative error",
+      "ours": 5.3201609784281345e-12,
+      "reference": 0.0,
+      "reference_kind": "analytic backprop agreement ideal"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 33,
+      "configuration": "sigmoid",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.12,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 33,
+      "configuration": "tanh",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.323,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-002",
+      "seed": 33,
+      "configuration": "relu",
+      "metric": "fraction derivative below 0.01",
+      "ours": 0.505,
+      "reference": 0.0,
+      "reference_kind": "zero saturation ideal (not competing method)"
+    },
+    {
+      "experiment": "EXP-003",
+      "seed": 33,
+      "configuration": "XOR",
+      "metric": "training accuracy",
+      "ours": 1.0,
+      "reference": 0.5,
+      "reference_kind": "single perceptron"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 33,
+      "configuration": "sgd",
+      "metric": "training cross entropy",
+      "ours": 0.5446976422879026,
+      "reference": 0.6901848343576975,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 33,
+      "configuration": "momentum",
+      "metric": "training cross entropy",
+      "ours": 0.2621114868197242,
+      "reference": 0.6487528761808827,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-004",
+      "seed": 33,
+      "configuration": "adam",
+      "metric": "training cross entropy",
+      "ours": 0.04174673759977163,
+      "reference": 0.5663346403045547,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 33,
+      "configuration": "scale=0.01",
+      "metric": "training cross entropy",
+      "ours": 0.22070296661389277,
+      "reference": 0.6391262938383928,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 33,
+      "configuration": "scale=0.5",
+      "metric": "training cross entropy",
+      "ours": 0.07564042548116386,
+      "reference": 0.5663294498849257,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-005",
+      "seed": 33,
+      "configuration": "scale=2.0",
+      "metric": "training cross entropy",
+      "ours": 0.11984669988679096,
+      "reference": 1.548696834309916,
+      "reference_kind": "first epoch loss"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 33,
+      "configuration": "dropout=0.0, L2=0.0",
+      "metric": "held-out accuracy",
+      "ours": 0.9166666666666666,
+      "reference": 0.9166666666666666,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 33,
+      "configuration": "dropout=0.3, L2=0.0",
+      "metric": "held-out accuracy",
+      "ours": 0.8833333333333333,
+      "reference": 0.9166666666666666,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 33,
+      "configuration": "dropout=0.0, L2=0.01",
+      "metric": "held-out accuracy",
+      "ours": 0.9333333333333333,
+      "reference": 0.9166666666666666,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-006",
+      "seed": 33,
+      "configuration": "dropout=0.3, L2=0.01",
+      "metric": "held-out accuracy",
+      "ours": 0.8666666666666667,
+      "reference": 0.9166666666666666,
+      "reference_kind": "unregularized matched initialization"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 33,
+      "configuration": "forward",
+      "metric": "maximum absolute difference",
+      "ours": 6.661338147750939e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 33,
+      "configuration": "input gradient",
+      "metric": "maximum absolute difference",
+      "ours": 4.440892098500626e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 33,
+      "configuration": "weight gradient",
+      "metric": "maximum absolute difference",
+      "ours": 1.3322676295501878e-15,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-007",
+      "seed": 33,
+      "configuration": "bias gradient",
+      "metric": "maximum absolute difference",
+      "ours": 4.440892098500626e-16,
+      "reference": 0.0,
+      "reference_kind": "PyTorch agreement ideal"
+    },
+    {
+      "experiment": "EXP-008",
+      "seed": 33,
+      "configuration": "CNN vs MLP",
+      "metric": "held-out accuracy",
+      "ours": 1.0,
+      "reference": 0.975,
+      "reference_kind": "dense MLP (different parameter counts)"
+    }
+  ],
+  "summary": [
+    {
+      "experiment": "EXP-001",
+      "configuration": "dense + cross entropy",
+      "metric": "maximum absolute difference",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 9.251858538542972e-17,
+      "ours_sd": 3.204937810639273e-17,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-001",
+      "configuration": "central difference",
+      "metric": "absolute derivative error",
+      "reference_kind": "analytic backprop agreement ideal",
+      "n": 3,
+      "ours_mean": 4.207254914826801e-12,
+      "ours_sd": 1.0040564069834073e-12,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-002",
+      "configuration": "sigmoid",
+      "metric": "fraction derivative below 0.01",
+      "reference_kind": "zero saturation ideal (not competing method)",
+      "n": 3,
+      "ours_mean": 0.12166666666666666,
+      "ours_sd": 0.0028867513459481316,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-002",
+      "configuration": "tanh",
+      "metric": "fraction derivative below 0.01",
+      "reference_kind": "zero saturation ideal (not competing method)",
+      "n": 3,
+      "ours_mean": 0.32466666666666666,
+      "ours_sd": 0.006658328118479399,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-002",
+      "configuration": "relu",
+      "metric": "fraction derivative below 0.01",
+      "reference_kind": "zero saturation ideal (not competing method)",
+      "n": 3,
+      "ours_mean": 0.496,
+      "ours_sd": 0.013076696830622032,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-003",
+      "configuration": "XOR",
+      "metric": "training accuracy",
+      "reference_kind": "single perceptron",
+      "n": 3,
+      "ours_mean": 1.0,
+      "ours_sd": 0.0,
+      "reference_mean": 0.5,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-004",
+      "configuration": "sgd",
+      "metric": "training cross entropy",
+      "reference_kind": "first epoch loss",
+      "n": 3,
+      "ours_mean": 0.5368721021485622,
+      "ours_sd": 0.008256699279341563,
+      "reference_mean": 0.7498778779887004,
+      "reference_sd": 0.08413431285801988
+    },
+    {
+      "experiment": "EXP-004",
+      "configuration": "momentum",
+      "metric": "training cross entropy",
+      "reference_kind": "first epoch loss",
+      "n": 3,
+      "ours_mean": 0.2224138194073918,
+      "ours_sd": 0.04944760078945299,
+      "reference_mean": 0.6909572925350146,
+      "reference_sd": 0.07279587370594615
+    },
+    {
+      "experiment": "EXP-004",
+      "configuration": "adam",
+      "metric": "training cross entropy",
+      "reference_kind": "first epoch loss",
+      "n": 3,
+      "ours_mean": 0.05037945818798156,
+      "ours_sd": 0.007747214764116474,
+      "reference_mean": 0.5761798271142267,
+      "reference_sd": 0.029540842547988916
+    },
+    {
+      "experiment": "EXP-005",
+      "configuration": "scale=0.01",
+      "metric": "training cross entropy",
+      "reference_kind": "first epoch loss",
+      "n": 3,
+      "ours_mean": 0.26326680236323247,
+      "ours_sd": 0.12841767050152847,
+      "reference_mean": 0.6344938966128768,
+      "reference_sd": 0.010753752339420952
+    },
+    {
+      "experiment": "EXP-005",
+      "configuration": "scale=0.5",
+      "metric": "training cross entropy",
+      "reference_kind": "first epoch loss",
+      "n": 3,
+      "ours_mean": 0.07906613730159993,
+      "ours_sd": 0.008469475961818554,
+      "reference_mean": 0.5879390424340253,
+      "reference_sd": 0.045610349525846396
+    },
+    {
+      "experiment": "EXP-005",
+      "configuration": "scale=2.0",
+      "metric": "training cross entropy",
+      "reference_kind": "first epoch loss",
+      "n": 3,
+      "ours_mean": 0.10396874340614082,
+      "ours_sd": 0.02391080587824404,
+      "reference_mean": 2.305082057208164,
+      "reference_sd": 1.0829787470418786
+    },
+    {
+      "experiment": "EXP-006",
+      "configuration": "dropout=0.0, L2=0.0",
+      "metric": "held-out accuracy",
+      "reference_kind": "unregularized matched initialization",
+      "n": 3,
+      "ours_mean": 0.8999999999999999,
+      "ours_sd": 0.016666666666666663,
+      "reference_mean": 0.8999999999999999,
+      "reference_sd": 0.016666666666666663
+    },
+    {
+      "experiment": "EXP-006",
+      "configuration": "dropout=0.3, L2=0.0",
+      "metric": "held-out accuracy",
+      "reference_kind": "unregularized matched initialization",
+      "n": 3,
+      "ours_mean": 0.9055555555555556,
+      "ours_sd": 0.053575837561071975,
+      "reference_mean": 0.8999999999999999,
+      "reference_sd": 0.016666666666666663
+    },
+    {
+      "experiment": "EXP-006",
+      "configuration": "dropout=0.0, L2=0.01",
+      "metric": "held-out accuracy",
+      "reference_kind": "unregularized matched initialization",
+      "n": 3,
+      "ours_mean": 0.9444444444444443,
+      "ours_sd": 0.00962250448649373,
+      "reference_mean": 0.8999999999999999,
+      "reference_sd": 0.016666666666666663
+    },
+    {
+      "experiment": "EXP-006",
+      "configuration": "dropout=0.3, L2=0.01",
+      "metric": "held-out accuracy",
+      "reference_kind": "unregularized matched initialization",
+      "n": 3,
+      "ours_mean": 0.8833333333333333,
+      "ours_sd": 0.04409585518440985,
+      "reference_mean": 0.8999999999999999,
+      "reference_sd": 0.016666666666666663
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "forward",
+      "metric": "maximum absolute difference",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 8.141635513917814e-16,
+      "ours_sd": 1.2819751242557095e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "input gradient",
+      "metric": "maximum absolute difference",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 5.921189464667501e-16,
+      "ours_sd": 2.5639502485114184e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "weight gradient",
+      "metric": "maximum absolute difference",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 2.812564995717063e-15,
+      "ours_sd": 2.1906400526089374e-15,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-007",
+      "configuration": "bias gradient",
+      "metric": "maximum absolute difference",
+      "reference_kind": "PyTorch agreement ideal",
+      "n": 3,
+      "ours_mean": 5.921189464667501e-16,
+      "ours_sd": 2.5639502485114184e-16,
+      "reference_mean": 0.0,
+      "reference_sd": 0.0
+    },
+    {
+      "experiment": "EXP-008",
+      "configuration": "CNN vs MLP",
+      "metric": "held-out accuracy",
+      "reference_kind": "dense MLP (different parameter counts)",
+      "n": 3,
+      "ours_mean": 0.9916666666666667,
+      "ours_sd": 0.014433756729740658,
+      "reference_mean": 0.9583333333333334,
+      "reference_sd": 0.028867513459481253
+    }
+  ]
+}

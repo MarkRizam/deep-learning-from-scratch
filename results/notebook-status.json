@@ -1,0 +1,10 @@
+{
+  "01-neurons.ipynb": "passed",
+  "02-activations.ipynb": "passed",
+  "03-losses.ipynb": "passed",
+  "04-backprop.ipynb": "passed",
+  "05-training.ipynb": "passed",
+  "06-optimizers.ipynb": "passed",
+  "07-regularization.ipynb": "passed",
+  "08-convolution.ipynb": "passed"
+}
