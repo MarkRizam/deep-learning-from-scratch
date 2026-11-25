@@ -1,6 +1,6 @@
 # Deep Learning From Scratch — AIR-004
 
-**Status:** educational implementation locally verified; scientific audit and hosted CI pending.
+**Status:** educational implementation audited locally; updated hosted CI and release review pending.
 
 NumPy neural network layers, manual backpropagation, SGD, momentum, Adam, dropout, L2 and valid 2D convolution. PyTorch is used only as a reference in tests and experiments. Complements [AIR-001](https://github.com/MarkRizam/machine-learning-from-scratch), [AIR-002](https://github.com/MarkRizam/mathematics-for-ai), [AIR-003](https://github.com/MarkRizam/statistics-for-ai) and [RizamLearning](https://github.com/MarkRizam/RizamLearning).
 
@@ -15,6 +15,10 @@ python scripts/verify_committed_results.py
 python -m dl_from_scratch.experiments
 python scripts/notebooks.py
 ```
+
+## V1.1 audit
+
+53 local tests passed, including 23 new regression cases. All 63 original numerical records reproduced exactly locally; see [scientific audit](research/audit-v1.1.md) for corrections and limitations.
 
 ## Evidence
 8 experiments, 21 configurations, 63 per-seed records, 30 local tests and 8 executed notebooks. All synthetic; no paid APIs or GPU needed. See [protocol](research/protocol.md), [report](research/report.md), [raw records](results/benchmarks.json), [limitations](research/limitations.md).
